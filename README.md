@@ -1,4 +1,4 @@
 # Chess
  Personal recreation of chess.
 
- ![Current Build](Chessboard.png)
+ ![Current Build](Current_Build.png)
