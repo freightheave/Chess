@@ -11,11 +11,9 @@ class Application:
         self.container2.pack(side=BOTTOM)
 
         #           --- IMPORT CHESSBOARD IMAGE ---
-        image = Image.open("Chessboard.png")
-        photo = ImageTk.PhotoImage(image)
-        label = ttk.Label(self.container1, image=photo)
-        label.image = photo
-        label.pack()
+        self.img = ImageTk.PhotoImage(Image.open("Chessboard.png"))
+        self.panel = ttk.Label(self.container1, image = self.img)
+        self.panel.pack()
 
         #           --- EXIT BUTTON WIDGET ---
         self.button = Button(self.container2)
