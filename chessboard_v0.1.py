@@ -6,26 +6,22 @@ class Application:
     def __init__(self, arg1):
         #           --- DEFINE THE FRAME WIDGETS ---
         self.container1 = Frame(arg1)
-        self.container1.pack(side=TOP)
-        self.container2 = Frame(arg1)
-        self.container2.pack(side=BOTTOM)
+        self.container1.pack()
 
         #           --- IMPORT CHESSBOARD IMAGE ---
-        self.img = ImageTk.PhotoImage(Image.open("Chessboard.png"))
+        self.img = ImageTk.PhotoImage(Image.open("D:\git-repos\Chess\image_assets\Chessboard.png"))
         self.panel = ttk.Label(self.container1, image = self.img)
         self.panel.pack()
-
-        #           --- EXIT BUTTON WIDGET ---
-        self.button = Button(self.container2)
-        self.button["text"] = "Exit"
-        self.button["command"] = root.destroy
-        self.button["background"] = "red"
-        self.button.pack()
 
 root = Tk()
 root.geometry('650x650')
 root.title('Chess')
-root.iconbitmap('icon.ico')
+root.iconbitmap('D:\git-repos\Chess\image_assets\icon.ico')
+
+#           --- MENU BAR ---
+menubar = Menu(root)
+menubar.add_command(label="Exit", command=root.quit)
+root.config(menu=menubar)
 
 app = Application(root)
 root.mainloop()
