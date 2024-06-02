@@ -9,14 +9,14 @@ class Application:
         self.container1.pack()
 
         #           --- IMPORT CHESSBOARD IMAGE ---
-        self.img = ImageTk.PhotoImage(Image.open("D:\git-repos\Chess\image_assets\Chessboard.png"))
+        self.img = ImageTk.PhotoImage(Image.open("D:\Repositories\Chess\image_assets\Chessboard.png"))
         self.panel = ttk.Label(self.container1, image = self.img)
         self.panel.pack()
 
 root = Tk()
 root.geometry('650x650')
 root.title('Chess')
-root.iconbitmap('D:\git-repos\Chess\image_assets\icon.ico')
+root.iconbitmap('D:\Repositories\Chess\image_assets\icon.ico')
 
 #           --- MENU BAR ---
 menubar = Menu(root)
